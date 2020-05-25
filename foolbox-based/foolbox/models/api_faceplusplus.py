@@ -9,8 +9,9 @@ import base64
 import json
 import struct
 
-key = "Lc-XYlfuvVhLFc61ev9eQgHTWxgggChn"
-secret = "nz0C7jw360yeKY3r3IJKfdaWG1iOYAwC"
+# todo: add your own account key and secret to query the API
+key = "" 
+secret = ""
 
 
 class FacePlusPlusModel(Model):

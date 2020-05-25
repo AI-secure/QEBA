@@ -13,13 +13,8 @@ class AzureModel(Model):
         from azure.cognitiveservices.vision.face import FaceClient
         from msrest.authentication import CognitiveServicesCredentials
 
-        # KEY = os.environ['FACE_SUBSCRIPTION_KEY']
-        # ENDPOINT = os.environ['FACE_ENDPOINT']
-        # free access
-        # KEY = "23741675ab464882b686de2ab3c843bb"
-        # ENDPOINT = "https://alriazure.cognitiveservices.azure.com"
-        # 200 dollars credit access
-        KEY = "ad6858edf2f44b79a797abf2b8287526"
+        # todo: add your own key to query Azure API
+        KEY = ""
         ENDPOINT = "https://fast.cognitiveservices.azure.com"
 
         self.face_client = FaceClient(ENDPOINT, CognitiveServicesCredentials(KEY))
