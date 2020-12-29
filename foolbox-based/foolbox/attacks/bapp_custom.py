@@ -67,7 +67,7 @@ class BAPP_custom(Attack):
             suffix = '',
             plot_adv = True,
             ):
-        """Applies Boundary Attack++.
+        """Applies QEBA Attack.
 
         Parameters
         ----------
@@ -187,11 +187,6 @@ class BAPP_custom(Attack):
             basis = self.rv_generator.generate_ps(sample, N, atk_level).astype(self.internal_dtype)
         else:
             basis = self.gen_random_basis(N)
-        #Orthogonalize
-        #axis = tuple(range(1, len(self.shape)))
-        #norm_v = (sample - target)[None]
-        #basis_proj = ((basis * norm_v).sum(axis=axis, keepdims=True)) / ((norm_v**2).sum(axis=axis, keepdims=True)) * norm_v
-        #basis = basis - basis_proj
         return basis
 
 
@@ -314,12 +309,6 @@ class BAPP_custom(Attack):
         prev_ps = [perturbed]
 
         ### Decision boundary direction ###
-        #sub_dirs = []
-        #for subp in range(10):
-        #    v1, v2 = np.random.randn(2, *self.shape)
-        #    v1 = v1 / np.linalg.norm(v1)
-        #    v2 = v2 / np.linalg.norm(v2)
-        #    sub_dirs.append(((v1, v2)))
         for step in range(1, iterations + 1):
             ### Plot decision boundary ###
             #N = 20
