@@ -48,8 +48,9 @@ if __name__ == '__main__':
     print ("Task: %s; Number of Image: %s; Number of repeat: %s"%(TASK, N_img, N_repeat))
 
     #for PGEN in ['PCA9408basis', 'DCT9408', 'resize9408', 'naive']:
+    for PGEN in ['DCT9408', 'resize9408', 'naive']:
     #for PGEN in ['resize9408']:
-    for PGEN in ['GAN128', ]:
+    #for PGEN in ['GAN128', ]:
 
     #for PGEN in ['PCA1200train', 'naive', 'DCT1200']:
     #for PGEN in ['resize768']:
