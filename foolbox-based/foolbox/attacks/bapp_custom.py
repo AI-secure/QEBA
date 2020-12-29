@@ -34,12 +34,13 @@ class BAPP_custom(Attack):
     References
     ----------
     ..
+    Code for QEBA attack. Paper arxiv link: https://arxiv.org/abs/2005.14137
+    This code was modified based on the BAPP attack (now named HopSkipJumpAttack)
     Boundary Attack ++ was originally proposed by Chen and Jordan.
     It is a decision-based attack that requires access to output
     labels of a model alone.
     Paper link: https://arxiv.org/abs/1904.02144
     The implementation in Foolbox is based on Boundary Attack.
-
     """
 
     @call_decorator
